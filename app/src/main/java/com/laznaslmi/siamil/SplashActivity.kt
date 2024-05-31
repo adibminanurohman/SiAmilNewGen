@@ -12,9 +12,9 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Menunda selama 3 detik sebelum pindah ke MainActivity
+        // Menunda selama 3 detik sebelum pindah ke OnBoardingActivity
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, OnBoardingActivity::class.java))
             finish()
         }, 3000) // 3000 ms = 3 detik
     }
