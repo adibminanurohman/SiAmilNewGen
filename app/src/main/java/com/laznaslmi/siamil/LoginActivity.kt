@@ -1,5 +1,6 @@
 package com.laznaslmi.siamil
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -10,7 +11,6 @@ import okhttp3.Request
 import okhttp3.Response
 import org.json.JSONObject
 import java.io.IOException
-import java.util.concurrent.TimeUnit
 
 class LoginActivity : AppCompatActivity() {
 
@@ -70,6 +70,15 @@ class LoginActivity : AppCompatActivity() {
 
                                         // Handle successful login here
                                         Toast.makeText(this@LoginActivity, "Welcome $nama", Toast.LENGTH_SHORT).show()
+
+                                        // Navigate to MainActivity
+                                        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                                        intent.putExtra("nip", nip)
+                                        intent.putExtra("nama", nama)
+                                        intent.putExtra("kotaLayanan", kotaLayanan)
+                                        intent.putExtra("dep", dep)
+                                        startActivity(intent)
+                                        finish() // Optional: Close LoginActivity
                                     }
                                 }
                             } else {

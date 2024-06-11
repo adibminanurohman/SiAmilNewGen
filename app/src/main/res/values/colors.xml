@@ -57,7 +57,7 @@
     <color name="green_900">#1b4c2c</color>
     <color name="green_950">#0a2916</color>
 
-    <color name="background">#FEFEFE</color>
-    <color name="primarylight">#9DC08B</color>
-    <color name="primary">#26C168</color>
+    <color name="colorPrimary">#4db6ac</color>
+    <color name="colorAccent">#03a9f4</color>
+    <color name="colorGray">#bdbdbd</color>
 </resources>
